@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopOfertasBR - As melhores ofertas do Mercado Livre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Custom CSS for additional styling */
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 100, 0, 0.1);
+        }
+        .buy-btn:hover {
+            background-color: #166534 !important;
+        }
+        .testimonial-bubble::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 20px;
+            border-width: 10px 10px 0;
+            border-style: solid;
+            border-color: #f0fdf4 transparent transparent;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans">
+    <!-- Header with fixed navigation -->
+    <header class="fixed w-full bg-green-800 text-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i data-feather="zap" class="text-green-300"></i>
+                <h1 class="text-xl font-bold">TopOfertasBR</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-green-300 transition">Home</a>
+                <a href="#" class="hover:text-green-300 transition">Ofertas</a>
+                <a href="#" class="hover:text-green-300 transition">Categorias</a>
+                <a href="#" class="hover:text-green-300 transition">Contato</a>
+            </nav>
+            <button class="md:hidden" id="mobile-menu-button">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-green-900 px-4 py-2">
+            <a href="#" class="block py-2 hover:text-green-300 transition">Home</a>
+            <a href="#" class="block py-2 hover:text-green-300 transition">Ofertas</a>
+            <a href="#" class="block py-2 hover:text-green-300 transition">Categorias</a>
+            <a href="#" class="block py-2 hover:text-green-300 transition">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-green-700 to-green-500 text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ofertas imperdíveis do Mercado Livre</h2>
+            <p class="text-xl mb-6">Os melhores produtos com os menores preços. Compre agora!</p>
+            <button class="bg-white text-green-800 font-bold py-3 px-6 rounded-full hover:bg-green-100 transition">
+                Ver Todas as Ofertas
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content - Product Grid -->
+    <main class="container mx-auto px-4 py-12">
+        <h2 class="text-2xl font-bold text-green-800 mb-8 text-center">Produtos em Destaque</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product Card 1 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-100 transition duration-300" data-aos="fade-up">
+                <div class="relative h-72 overflow-hidden">
+                    <img src="img/projetor 4k.jpg" alt="Projetor portátil 4K" class="w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                       
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-green-800 mb-2">Projetor Portátil 4K</h3>
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-600 font-bold text-xl">R$ 207,71</span>
+                       
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Resolução 4K Ultra HD</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Conexão Wi-Fi e Bluetooth</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Autonomia de 4 horas</li>
+                    </ul>
+                    <a href="https://mercadolivre.com/sec/2MWHUuu" target="_blank" class="buy-btn block w-full bg-green-600 hover:bg-green-700 text-white text-center font-bold py-2 px-4 rounded transition">
+                        Compre agora no Mercado Livre
+                    </a>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <h4 class="text-sm font-semibold text-green-800 mb-2">O que dizem nossos clientes:</h4>
+                        <div class="space-y-2">
+                            <div class="testimonial-bubble bg-green-50 p-3 rounded-lg relative">
+                                <p class="text-xs text-gray-700">"Imagem incrível! Vale cada centavo."</p>
+                                <div class="flex items-center mt-1">
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-100 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-80 overflow-hidden">
+                    <img src="img/aspirador robo.png" alt="Aspirador de pó portátil" class="w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-green-800 mb-2">Aspirador de Pó Portátil</h3>
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-600 font-bold text-xl">R$ 119,92</span>
+                        
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Potência 150W</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Bateria recarregável</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Filtro HEPA</li>
+                    </ul>
+                    <a href="https://mercadolivre.com/sec/1guWQWJ" target="_blank" class="buy-btn block w-full bg-green-600 hover:bg-green-700 text-white text-center font-bold py-2 px-4 rounded transition">
+                        Compre agora no Mercado Livre
+                    </a>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <h4 class="text-sm font-semibold text-green-800 mb-2">O que dizem nossos clientes:</h4>
+                        <div class="space-y-2">
+                            <div class="testimonial-bubble bg-green-50 p-3 rounded-lg relative">
+                                <p class="text-xs text-gray-700">"Muito prático para limpeza rápida."</p>
+                                <div class="flex items-center mt-1">
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-100 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-90 overflow-hidden">
+                    <img src="img/microfone.png" alt="Microfone gamer" class="w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-green-800 mb-2">Microfone Gamer Profissional</h3>
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-600 font-bold text-xl">R$ 149,90</span>
+                        
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Padrão de captação cardioide</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Frequência 20Hz-20kHz</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Compatível com PC, PS4, Xbox</li>
+                    </ul>
+                    <a href="https://mercadolivre.com/sec/2sPpygj" target="_blank" class="buy-btn block w-full bg-green-600 hover:bg-green-700 text-white text-center font-bold py-2 px-4 rounded transition">
+                        Compre agora no Mercado Livre
+                    </a>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <h4 class="text-sm font-semibold text-green-800 mb-2">O que dizem nossos clientes:</h4>
+                        <div class="space-y-2">
+                            <div class="testimonial-bubble bg-green-50 p-3 rounded-lg relative">
+                                <p class="text-xs text-gray-700">"Qualidade de som excelente para streams."</p>
+                                <div class="flex items-center mt-1">
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-100 transition duration-300" data-aos="fade-up">
+                <div class="relative h-72 overflow-hidden">
+                    <img src="img/SMARTWHATCH.png" alt="Smartwatch" class="w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-green-800 mb-2">Smartwatch Inteligente</h3>
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-600 font-bold text-xl">R$ 149,90</span>
+    
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Monitor de frequência cardíaca</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Resistente à água</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Tela AMOLED 1.4"</li>
+                    </ul>
+                    <a href="https://mercadolivre.com/sec/1rVXQGV" target="_blank" class="buy-btn block w-full bg-green-600 hover:bg-green-700 text-white text-center font-bold py-2 px-4 rounded transition">
+                        Compre agora no Mercado Livre
+                    </a>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <h4 class="text-sm font-semibold text-green-800 mb-2">O que dizem nossos clientes:</h4>
+                        <div class="space-y-2">
+                            <div class="testimonial-bubble bg-green-50 p-3 rounded-lg relative">
+                                <p class="text-xs text-gray-700">"Ótimo para acompanhar meus treinos."</p>
+                                <div class="flex items-center mt-1">
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-100 transition duration-100" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-75">
+                    <img src="img/fone.png" alt="Fone de ouvido Bluetooth" class="w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                       
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-green-800 mb-2">Fone de Ouvido Bluetooth</h3>
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-600 font-bold text-xl">R$ 78,90</span>
+                        
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Cancelamento de ruído</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Bateria para 30 horas</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Compatível com Alexa</li>
+                    </ul>
+                    <a href="https://mercadolivre.com/sec/2oSk2pu" target="_blank" class="buy-btn block w-full bg-green-600 hover:bg-green-700 text-white text-center font-bold py-2 px-4 rounded transition">
+                        Compre agora no Mercado Livre
+                    </a>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <h4 class="text-sm font-semibold text-green-800 mb-2">O que dizem nossos clientes:</h4>
+                        <div class="space-y-2">
+                            <div class="testimonial-bubble bg-green-50 p-3 rounded-lg relative">
+                                <p class="text-xs text-gray-700">"Qualidade de som impressionante!"</p>
+                                <div class="flex items-center mt-1">
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card bg-white rounded-lg overflow-hidden shadow-md border border-green-100 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-75 overflow-hidden">
+                    <img src="img/bateria.png" alt="Bateria portátil (power bank)" class="w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg text-green-800 mb-2">Power Bank 20.000mAh</h3>
+                    <div class="flex items-center mb-3">
+                        <span class="text-green-600 font-bold text-xl">R$ 149,95</span>
+                       
+                    </div>
+                    <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Capacidade 20.000mAh</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> 3 portas USB</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-4 h-4 mr-2 text-green-500"></i> Carregamento rápido</li>
+                    </ul>
+                    <a href="https://mercadolivre.com/sec/2KHyGf5" target="_blank" class="buy-btn block w-full bg-green-600 hover:bg-green-700 text-white text-center font-bold py-2 px-4 rounded transition">
+                        Compre agora no Mercado Livre
+                    </a>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <h4 class="text-sm font-semibold text-green-800 mb-2">O que dizem nossos clientes:</h4>
+                        <div class="space-y-2">
+                            <div class="testimonial-bubble bg-green-50 p-3 rounded-lg relative">
+                                <p class="text-xs text-gray-700">"Carrega meu celular várias vezes."</p>
+                                <div class="flex items-center mt-1">
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500 fill-yellow-500 mr-1"></i>
+                                    <i data-feather="star" class="w-3 h-3 text-yellow-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="zap" class="text-green-300"></i>
+                        <h3 class="text-xl font-bold">TopOfertasBR</h3>
+                    </div>
+                    <p class="text-green-200 text-sm max-w-xs">
+                        Encontre as melhores ofertas do Mercado Livre em um só lugar. Economize tempo e dinheiro!
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold text-green-300 mb-3">Links Úteis</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-green-200 transition">Termos de Uso</a></li>
+                            <li><a href="#" class="hover:text-green-200 transition">Política de Privacidade</a></li>
+                            <li><a href="#" class="hover:text-green-200 transition">Dúvidas Frequentes</a></li>
+                        </ul>
+                    </div>
+                    
+        
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-green-800 mt-8 pt-6 text-center text-sm text-green-300">
+                <p>Somos afiliados do Mercado Livre. Ao comprar através dos nossos links, você nos ajuda a manter o site sem pagar nada a mais por isso.</p>
+                <p class="mt-2">© 2025 TopOfertasBR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Replace Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
